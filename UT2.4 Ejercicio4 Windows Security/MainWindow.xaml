@@ -5,25 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UT2._4_Ejercicio4_Windows_Security"
         mc:Ignorable="d"
-        Title="Windows Security" Height="340" Width="530">
+        Title="Windows Security" Height="340" Width="530" ResizeMode="NoResize" Icon="/imgs/cactus.png">
     <Window.Resources>
 
         <Style TargetType="TextBlock">
             <Setter Property="TextAlignment" Value="Justify"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="20,10"/>
         </Style>
 
         <Style TargetType="Rectangle">
             <Setter Property="Height" Value="1"/>
-            <Setter Property="Margin" Value="15"/>
             <Setter Property="Fill" Value="Gray"/>
+            <Setter Property="Margin" Value="20,10"/>
         </Style>
 
-        <Style x:Key="stckFlotante" TargetType="StackPanel">
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="90"/>
+            <Setter Property="Margin" Value="0,10,20,10"/>
+            <Setter Property="Padding" Value="8"/>
         </Style>
-        
+       
         <Style TargetType="Image">
             <Setter Property="Width" Value="48"/>
             <Setter Property="Width" Value="48"/>
@@ -46,30 +48,46 @@
             <Rectangle Fill="DarkGray" />
         </StackPanel>
 
-       <StackPanel DockPanel.Dock="Bottom">
-            <Button>
-                <Button.Content>Aceptar</Button.Content>
-            </Button>
-            <Button>
-                <Button.Content>Cancelar</Button.Content>
-            </Button>
+        <Border Background="LightGray"
+                BorderBrush="DimGray"
+                BorderThickness="0, 1, 0, 0"
+                DockPanel.Dock="Bottom">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button>
+                    <Button.Content>Aceptar</Button.Content>
+                </Button>
+                <Button>
+                    <Button.Content>Cancelar</Button.Content>
+                </Button>
+
+            </StackPanel>
+        </Border>
+
+        <Border Background="AliceBlue"
+                BorderBrush="CadetBlue"
+                BorderThickness="2"
+                CornerRadius="8"
+                Margin="20,10"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Border Background="White"
+                BorderBrush="CadetBlue"
+                BorderThickness="2"
+                CornerRadius="8"
+                Margin="20,10">
+                    <Image Source="/imgs/cactus.png"/>
+                </Border>
             
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal" Style="{DynamicResource stckFlotante}">
-
-            <Image Source="/imgs/cactus.png"/>
-
             <StackPanel Orientation="Vertical">
                 <TextBox>User name</TextBox>
                 <TextBox>Password</TextBox>
-
             </StackPanel>
-
-
-
         </StackPanel>
+        </Border>
+        
 
-
+            
+        
     </DockPanel>
 </Window>
