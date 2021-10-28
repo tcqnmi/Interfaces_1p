@@ -1,0 +1,28 @@
+﻿<Window x:Class="UT2_2__M4_DockPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UT2_2__M4_DockPanel"
+        mc:Ignorable="d"
+        Title="M4 DockPanel" Height="450" Width="400">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Padding" Value="8"/>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <Button DockPanel.Dock="Top" Content="Control Dockpanel"/>
+        <Button DockPanel.Dock="Top" Content="Control Dockpanel 2"/>
+        <Button DockPanel.Dock="Left" Content="Left"/>
+        <StackPanel DockPanel.Dock="Right">
+            <Button Content="Right"/>
+            <Button Content="Right"/>
+            <Button Content="Right"/>
+            <Button Content="Right"/>
+        </StackPanel>
+        <Button DockPanel.Dock="Bottom" Content="Bottom"/>
+        <Rectangle Fill="Aqua" />
+    </DockPanel>
+</Window>

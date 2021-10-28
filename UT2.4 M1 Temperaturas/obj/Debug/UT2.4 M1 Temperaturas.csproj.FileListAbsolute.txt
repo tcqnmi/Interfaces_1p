@@ -1,0 +1,15 @@
+D:\Interfaces\UT2\UT2.4 M1 Temperaturas\bin\Debug\UT2.4 M1 Temperaturas.exe.config
+D:\Interfaces\UT2\UT2.4 M1 Temperaturas\bin\Debug\UT2.4 M1 Temperaturas.exe
+D:\Interfaces\UT2\UT2.4 M1 Temperaturas\bin\Debug\UT2.4 M1 Temperaturas.pdb
+D:\Interfaces\UT2\UT2.4 M1 Temperaturas\obj\Debug\UT2.4 M1 Temperaturas.csproj.AssemblyReference.cache
+D:\Interfaces\UT2\UT2.4 M1 Temperaturas\obj\Debug\MainWindow.g.cs
+D:\Interfaces\UT2\UT2.4 M1 Temperaturas\obj\Debug\App.g.cs
+D:\Interfaces\UT2\UT2.4 M1 Temperaturas\obj\Debug\UT2.4 M1 Temperaturas_MarkupCompile.cache
+D:\Interfaces\UT2\UT2.4 M1 Temperaturas\obj\Debug\UT2.4 M1 Temperaturas_MarkupCompile.lref
+D:\Interfaces\UT2\UT2.4 M1 Temperaturas\obj\Debug\MainWindow.baml
+D:\Interfaces\UT2\UT2.4 M1 Temperaturas\obj\Debug\UT2.4 M1 Temperaturas.g.resources
+D:\Interfaces\UT2\UT2.4 M1 Temperaturas\obj\Debug\UT2._4_M1_Temperaturas.Properties.Resources.resources
+D:\Interfaces\UT2\UT2.4 M1 Temperaturas\obj\Debug\UT2.4 M1 Temperaturas.csproj.GenerateResource.cache
+D:\Interfaces\UT2\UT2.4 M1 Temperaturas\obj\Debug\UT2.4 M1 Temperaturas.csproj.CoreCompileInputs.cache
+D:\Interfaces\UT2\UT2.4 M1 Temperaturas\obj\Debug\UT2.4 M1 Temperaturas.exe
+D:\Interfaces\UT2\UT2.4 M1 Temperaturas\obj\Debug\UT2.4 M1 Temperaturas.pdb

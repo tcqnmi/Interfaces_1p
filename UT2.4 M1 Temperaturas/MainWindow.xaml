@@ -1,0 +1,49 @@
+﻿<Window x:Class="UT2._4_M1_Temperaturas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UT2._4_M1_Temperaturas"
+        mc:Ignorable="d"
+        Title="UT2.4" Height="600" Width="300" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="Window">
+            <Setter Property="Background" Value="MistyRose"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter  Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="styTemperatura" TargetType="TextBlock"
+               BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="FontSize" Value="58"/>
+            <Setter Property="FontWeight" Value="Light"/>
+        </Style>
+        <Style x:Key="styPronostico" TargetType="TextBlock"
+               BasedOn="{StaticResource styTemperatura}">
+            <Setter Property="FontSize" Value="26"/>
+            <Setter Property="FontWeight" Value="Regular"/>
+        </Style>
+       
+        
+    </Window.Resources>
+
+    <StackPanel>
+        <TextBlock Text="20ºC" Style="{DynamicResource styTemperatura}"/>
+        <TextBlock Text="Parcialmente nublado" Style="{DynamicResource styPronostico}"/>
+        <TextBlock Text="León (España)"/>
+
+        <TextBlock Text="18ºC" Style="{DynamicResource styTemperatura}"/>
+        <TextBlock Text="Lluvias" Style="{DynamicResource styPronostico}"/>
+        <TextBlock Text="San Andrés (León)" />
+
+        <TextBlock Text="15ºC" Style="{DynamicResource styTemperatura}"/>
+        <TextBlock Text="Nublado" Style="{DynamicResource styPronostico}"/>
+        <TextBlock Text="Boñar (León)"/>
+
+        <TextBlock Text="20ºC" Style="{DynamicResource styTemperatura}"/>
+        <TextBlock Text="Parcialmente nublado" Style="{DynamicResource styPronostico}"/>
+        <TextBlock Text="Caldas de Luna (León)" />
+
+    </StackPanel>
+</Window>

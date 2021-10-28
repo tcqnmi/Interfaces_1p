@@ -1,0 +1,102 @@
+﻿<Window x:Class="Ejercicio3_BoxLoging.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio3_BoxLoging"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="520" Width="350" Icon="/imgs/cactus.png">
+    <Window.Resources>
+
+        <SolidColorBrush x:Key="letras" Color="DimGray"/>
+
+        <Style TargetType="FrameworkElement">
+            <Setter Property="Margin" Value="0,5"/>
+        </Style>
+
+        <Style TargetType="Control">
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+        
+        <Style TargetType="StackPanel">
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            
+        </Style>
+
+        <Style TargetType="Label" BasedOn="{StaticResource {x:Type FrameworkElement}}">
+            <Setter Property="Foreground" Value="{StaticResource letras}"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+
+        <Style x:Key="hipervinculos" TargetType="Label">
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+        
+        <Style x:Key="stHipervinculos"  TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="Width" Value="200"/>
+        </Style>
+        
+        <Style TargetType="AccessText">
+            <Setter Property="Foreground" Value="{StaticResource letras}"/>
+            <Setter Property="Margin" Value="9,0"/>
+        </Style>
+
+        <Style BasedOn="{StaticResource {x:Type Control}}" TargetType="PasswordBox">
+        </Style>
+
+        <Style BasedOn="{StaticResource {x:Type Control}}" TargetType="TextBox">
+            
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="RoyalBlue"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="0, 10"/>
+            <Setter Property="FontSize" Value="22"/>
+        </Style>
+
+        <Style TargetType="Image">
+            <Setter Property="Height" Value="18"/>
+        </Style>
+        
+        <Style x:Key="logo" TargetType="Image">
+            <Setter Property="Height" Value="150"/>
+        </Style>
+        
+    </Window.Resources>
+    <StackPanel >
+
+        <Image Style="{StaticResource logo}" Source="imgs/box_logo.png"/>
+        <Label Content="Email Address: "/>
+        <TextBox Text="ejemplo@ejemplo.com"/>
+        <Label Content="Password:"/>
+        <PasswordBox  Password="12345"/>
+        <Button Content="_Log in"/>
+
+        <!-- Al meterlo todo en el label simula ser un hipervinculo-->
+        <Label Style="{StaticResource hipervinculos}">
+            <StackPanel Style="{StaticResource stHipervinculos}">
+                <Image Source="imgs/computer72.png"/>
+            <AccessText Text="_Use company credentials"/>
+            </StackPanel>
+        </Label>
+        <Label Style="{StaticResource hipervinculos}">
+            <StackPanel Style="{StaticResource stHipervinculos}">
+                <Image Source="imgs/calendar50.png"/>
+                <AccessText Text="_Can access your account?"/>
+            </StackPanel>
+        </Label>
+        <Label Style="{StaticResource hipervinculos}">
+            <StackPanel Style="{StaticResource stHipervinculos}">
+                <Image Source="imgs/circular55.png"/>
+                <AccessText Text="_Sign up for a BOX account"/>
+            </StackPanel>
+        </Label>
+        
+        
+
+    </StackPanel>
+</Window>

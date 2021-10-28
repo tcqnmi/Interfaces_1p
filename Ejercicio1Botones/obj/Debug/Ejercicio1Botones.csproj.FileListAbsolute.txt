@@ -1,0 +1,15 @@
+D:\Interfaces\UT2\Ejercicio1Botones\bin\Debug\Ejercicio1Botones.exe.config
+D:\Interfaces\UT2\Ejercicio1Botones\bin\Debug\Ejercicio1Botones.exe
+D:\Interfaces\UT2\Ejercicio1Botones\bin\Debug\Ejercicio1Botones.pdb
+D:\Interfaces\UT2\Ejercicio1Botones\obj\Debug\Ejercicio1Botones.csproj.AssemblyReference.cache
+D:\Interfaces\UT2\Ejercicio1Botones\obj\Debug\MainWindow.g.cs
+D:\Interfaces\UT2\Ejercicio1Botones\obj\Debug\App.g.cs
+D:\Interfaces\UT2\Ejercicio1Botones\obj\Debug\Ejercicio1Botones_MarkupCompile.cache
+D:\Interfaces\UT2\Ejercicio1Botones\obj\Debug\Ejercicio1Botones_MarkupCompile.lref
+D:\Interfaces\UT2\Ejercicio1Botones\obj\Debug\MainWindow.baml
+D:\Interfaces\UT2\Ejercicio1Botones\obj\Debug\Ejercicio1Botones.g.resources
+D:\Interfaces\UT2\Ejercicio1Botones\obj\Debug\Ejercicio1Botones.Properties.Resources.resources
+D:\Interfaces\UT2\Ejercicio1Botones\obj\Debug\Ejercicio1Botones.csproj.GenerateResource.cache
+D:\Interfaces\UT2\Ejercicio1Botones\obj\Debug\Ejercicio1Botones.csproj.CoreCompileInputs.cache
+D:\Interfaces\UT2\Ejercicio1Botones\obj\Debug\Ejercicio1Botones.exe
+D:\Interfaces\UT2\Ejercicio1Botones\obj\Debug\Ejercicio1Botones.pdb

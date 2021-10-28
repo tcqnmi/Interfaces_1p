@@ -1,0 +1,103 @@
+﻿<Window x:Class="Ejercicio1Botones.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio1Botones"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="5500" Width="300">
+    <Window.Resources>
+        <SolidColorBrush x:Key="Fondo" Color="SandyBrown"/>
+        <Style TargetType="FrameworkElement">
+            <Setter Property="Margin" Value="3"/>
+        </Style>
+        <Style TargetType="Button"
+               BasedOn="{StaticResource {x:Type FrameworkElement}}">
+            <Setter Property="Background" Value="{StaticResource Fondo}"/>
+            <Setter Property="Width" Value="auto"/>
+           
+        </Style>
+        <Style x:Key="botonesCentrados" TargetType="StackPanel">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Image">
+            <Setter Property="Stretch" Value="Fill"/>
+            <Setter Property="Width" Value="50"/>
+        </Style>
+        <Style TargetType="AccessText"
+               BasedOn="{StaticResource {x:Type FrameworkElement}}">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    
+    <StackPanel Orientation="Vertical" >
+        
+        <Button>
+            <Image Source="imgs/cactus.png"/>
+        </Button>
+        
+        <StackPanel Orientation="Horizontal" 
+                    Style="{DynamicResource botonesCentrados}" >
+            <Button>
+                <Image Source="imgs/cactus.png"/>
+            </Button>
+            <Button>
+                <Image Source="imgs/cactus.png"/>
+            </Button>
+            <Button>
+                <Image Source="imgs/cactus.png"/>
+            </Button>
+        </StackPanel>
+        
+        <Button>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="imgs/calendar50.png"/>
+                <AccessText Text="Calendario"/>
+            </StackPanel>
+        </Button>
+        <Button>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="imgs/circular55.png"/>
+                    <Image Source="imgs/computer72.png"/>
+                    <Image Source="imgs/computer73.png"/>
+                </StackPanel>
+                <AccessText Text="Ordenadores"/>
+            </StackPanel>
+        </Button>
+        
+        <Button HorizontalContentAlignment="Left">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="imgs/construction3.png"/>
+                <AccessText Text="Personal"/>
+            </StackPanel>
+        </Button>
+        
+        <Button HorizontalContentAlignment="Right">
+            <StackPanel Orientation="Horizontal">
+                <AccessText Text="Personal"/>
+                <Image Source="imgs/construction3.png"/>
+            </StackPanel>
+        </Button>
+        
+        <Button HorizontalContentAlignment="Left">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <AccessText Grid.Column="0" Text="Personal"/>
+                <Image Grid.Column="1" Source="imgs/construction3.png"/>
+            </Grid>
+        </Button>
+        
+        <Button HorizontalContentAlignment="left">
+            <StackPanel Orientation="Horizontal">
+                <AccessText Text="Personal (StackPanel)"/>
+                <Image Source="imgs/construction3.png"/>
+            </StackPanel>
+        </Button>
+    </StackPanel>
+</Window>

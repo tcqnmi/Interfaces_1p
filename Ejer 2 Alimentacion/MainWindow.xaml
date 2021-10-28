@@ -1,0 +1,98 @@
+﻿<Window x:Class="Ejer_2_Alimentacion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejer_2_Alimentacion"
+        mc:Ignorable="d"
+        Title="UT 024 Ejer 2" Height="420" Width="550" ResizeMode="NoResize"
+        Icon="imgs/cactus.png">
+    <Window.Resources>
+        
+        <Style TargetType="FrameworkElement">
+            <Setter Property="Margin" Value="10, 5"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        
+        <Style x:Key="alimentacion" TargetType="TextBlock"
+               BasedOn="{StaticResource {x:Type FrameworkElement}}">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+       
+        <Style TargetType="Image">            
+            <Setter Property="Margin" Value="20, 8, 0, 8"/>
+        </Style>
+        
+        <Style TargetType="TextBlock">
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="TextAlignment" Value="Justify"/>
+        </Style>
+        
+        <Style TargetType="Button" 
+               BasedOn="{StaticResource { x:Type FrameworkElement}}">
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        </Style>
+        
+        <Style TargetType="AccessText"
+               BasedOn="{StaticResource {x:Type FrameworkElement}}">
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Width" Value="90"/>
+        </Style>
+        
+    </Window.Resources>
+    
+    <StackPanel Orientation="Vertical">
+        <TextBlock Style="{StaticResource alimentacion}">Alimentación: </TextBlock>
+        <Button>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="imgs/c1_png.png"/>
+                <AccessText Text="Sin _gluten" Foreground="Coral"/>
+                <TextBlock>
+                    <Bold> Mas de 400 productos</Bold> sin gluten aptos para celíacos, todos ellos bien colocados en su sección del linea
+                </TextBlock>
+            </StackPanel>
+        </Button>
+        <Button>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="imgs/c2_png.png"/>
+                <AccessText Text="Ecológico" Foreground="YellowGreen"/>
+                <TextBlock >
+                    Tenemos <Bold> más de 500 productos</Bold> ecológicos certificados
+                </TextBlock>
+            </StackPanel>
+        </Button>
+        <Button>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="imgs/c3_png.png"/>
+                <AccessText Text="Sin Lactosa" Foreground="Purple"/>
+                <TextBlock >
+                    El 30% de la población sifre intolerancia a la lactosa. Para ellos tenemos <Bold> 120 productos</Bold> 
+                </TextBlock>
+            </StackPanel>
+        </Button>
+        <Button>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="imgs/c4_png.png"/>
+                <AccessText Text="Bajo en Sal" Foreground="Plum"/>
+                <TextBlock >
+                    Aquellos que necesiten o elijan una dieta hiposódica podrán encontrar <Bold> cientos de productos</Bold> bajos en sal o sin sal
+                </TextBlock>
+            </StackPanel>
+        </Button>
+        <Button>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="imgs/c5_png.png"/>
+                <AccessText Text="Dietéticos" Foreground="DarkCyan"/>
+                <TextBlock >
+                    Para todos aquellos que deseen cuidar su alimentacón, disponemos de <Bold> más de 300 productos</Bold> dietéticos y bajos en grasas
+                </TextBlock>
+            </StackPanel>
+        </Button>
+
+    </StackPanel>
+</Window>
