@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UT2._4_Ejercicio4_Windows_Security"
         mc:Ignorable="d"
-        Title="Windows Security" Height="340" Width="530" ResizeMode="NoResize" Icon="/imgs/cactus.png">
+        Title="DAM 2. Ventana inicio" Height="340" Width="530" ResizeMode="NoResize" Icon="/imgs/cactus.png">
     <Window.Resources>
-
+        <!-- bordes y controles de layout no necesitan estilos-->
         <Style TargetType="TextBlock">
             <Setter Property="TextAlignment" Value="Justify"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
@@ -25,17 +25,19 @@
             <Setter Property="Margin" Value="0,10,20,10"/>
             <Setter Property="Padding" Value="8"/>
         </Style>
-       
+
         <Style TargetType="Image">
             <Setter Property="Width" Value="48"/>
-            <Setter Property="Width" Value="48"/>
+            <Setter Property="Height" Value="48"/>
         </Style>
-        
+
         <Style TargetType="TextBox">
             <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="10, 3"/>
+            <Setter Property="Padding" Value="5"/>
         </Style>
-        
-               
+
+
     </Window.Resources>
     <DockPanel>
         <StackPanel DockPanel.Dock="Top">
@@ -43,7 +45,7 @@
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </TextBlock>
             <TextBlock >
-                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
             </TextBlock>
             <Rectangle Fill="DarkGray" />
         </StackPanel>
@@ -63,31 +65,39 @@
             </StackPanel>
         </Border>
 
-        <Border Background="AliceBlue"
+        <Border
                 BorderBrush="CadetBlue"
                 BorderThickness="2"
                 CornerRadius="8"
                 Margin="20,10"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA4C0C5" Offset="0.013"/>
+                    <GradientStop Color="#FF9CEFFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
             <StackPanel Orientation="Horizontal">
                 <Border Background="White"
-                BorderBrush="CadetBlue"
+                BorderBrush="Blue"
                 BorderThickness="2"
                 CornerRadius="8"
-                Margin="20,10">
+                Margin="20,10"
+                Padding="10">
                     <Image Source="/imgs/cactus.png"/>
                 </Border>
-            
-            <StackPanel Orientation="Vertical">
-                <TextBox>User name</TextBox>
-                <TextBox>Password</TextBox>
-            </StackPanel>
-        </StackPanel>
-        </Border>
-        
 
-            
-        
+                <StackPanel Orientation="Vertical"
+                            VerticalAlignment="Center">
+                    <TextBox>User name</TextBox>
+                    <TextBox>Password</TextBox>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+
+
+
     </DockPanel>
 </Window>
