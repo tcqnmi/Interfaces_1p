@@ -1,0 +1,105 @@
+﻿<Window x:Class="Problema_1_EV1_P1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Problema_1_EV1_P1"
+        mc:Ignorable="d"
+        Title="Tamara Moran" Height="320" Width="510"
+        Icon="/imgs/cactus.png">
+    <Window.Resources>
+        <Style TargetType="FrameworkElement">
+            <Setter Property="Margin" Value="20,8"/>
+        </Style>
+
+        <Style TargetType="Image"
+               BasedOn="{StaticResource {x:Type FrameworkElement}}">
+            <Setter Property="Source" Value="/imgs/exclamation31.png"/>
+            <Setter Property="Width" Value="36"/>
+        </Style>
+
+        <Style TargetType="TextBlock"
+               BasedOn="{StaticResource {x:Type FrameworkElement}}">
+            <Setter Property="Foreground" Value="DimGray"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+
+        <Style TargetType="TextBlock"
+               BasedOn="{StaticResource {x:Type TextBlock}}"
+               x:Key="txtNum">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="5.8"/>
+
+        </Style>
+
+        <Style TargetType="TextBlock"
+                BasedOn="{StaticResource {x:Type TextBlock}}"
+               x:Key="txtDesc">
+
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+
+        </Style>
+
+        <Style TargetType="Border"
+               BasedOn="{StaticResource {x:Type FrameworkElement}}"
+               x:Key="bordeGrid">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+
+        </Style>
+    </Window.Resources>
+    <StackPanel Background="AliceBlue">
+        <TextBlock>
+            Su equipo está <Bold> funcionando con lentitud </Bold>
+        </TextBlock>
+        <Border Style="{DynamicResource bordeGrid}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition  Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Image/>
+                <TextBlock Style="{DynamicResource txtNum}" 
+                       Grid.Column="1">
+                  6
+                </TextBlock>
+                <TextBlock Style="{DynamicResource txtDesc}" 
+                       Grid.Column="2">
+                    Aplicaciones innecesarias
+                </TextBlock>
+
+                <Image Grid.Row="1"/>
+                <TextBlock Style="{DynamicResource txtNum}" 
+                       Grid.Row="1" Grid.Column="1">
+                    222
+                </TextBlock>
+                <TextBlock Style="{DynamicResource txtDesc}" 
+                       Grid.Row="1" Grid.Column="2">
+                        Errores en la configuración
+                </TextBlock>
+
+                <Image Grid.Row="2"/>
+                <TextBlock Style="{DynamicResource txtNum}"
+                       Grid.Row="2" Grid.Column="1">
+                        8.24GB
+                </TextBlock>
+                <TextBlock Style="{DynamicResource txtDesc}"
+                       Grid.Row="2" Grid.Column="2">
+                        Para liberar en disco
+                </TextBlock>
+
+            </Grid>
+        </Border>
+
+
+    </StackPanel>
+</Window>

@@ -1,0 +1,15 @@
+D:\Interfaces\UT2\Problema3Ev1P1Modelo\obj\Debug\Problema3Ev1P1Modelo.csproj.AssemblyReference.cache
+D:\Interfaces\UT2\Problema3Ev1P1Modelo\obj\Debug\MainWindow.g.cs
+D:\Interfaces\UT2\Problema3Ev1P1Modelo\obj\Debug\App.g.cs
+D:\Interfaces\UT2\Problema3Ev1P1Modelo\obj\Debug\Problema3Ev1P1Modelo_MarkupCompile.cache
+D:\Interfaces\UT2\Problema3Ev1P1Modelo\obj\Debug\Problema3Ev1P1Modelo_MarkupCompile.lref
+D:\Interfaces\UT2\Problema3Ev1P1Modelo\bin\Debug\Problema3Ev1P1Modelo.exe.config
+D:\Interfaces\UT2\Problema3Ev1P1Modelo\bin\Debug\Problema3Ev1P1Modelo.exe
+D:\Interfaces\UT2\Problema3Ev1P1Modelo\bin\Debug\Problema3Ev1P1Modelo.pdb
+D:\Interfaces\UT2\Problema3Ev1P1Modelo\obj\Debug\MainWindow.baml
+D:\Interfaces\UT2\Problema3Ev1P1Modelo\obj\Debug\Problema3Ev1P1Modelo.g.resources
+D:\Interfaces\UT2\Problema3Ev1P1Modelo\obj\Debug\Problema3Ev1P1Modelo.Properties.Resources.resources
+D:\Interfaces\UT2\Problema3Ev1P1Modelo\obj\Debug\Problema3Ev1P1Modelo.csproj.GenerateResource.cache
+D:\Interfaces\UT2\Problema3Ev1P1Modelo\obj\Debug\Problema3Ev1P1Modelo.csproj.CoreCompileInputs.cache
+D:\Interfaces\UT2\Problema3Ev1P1Modelo\obj\Debug\Problema3Ev1P1Modelo.exe
+D:\Interfaces\UT2\Problema3Ev1P1Modelo\obj\Debug\Problema3Ev1P1Modelo.pdb
