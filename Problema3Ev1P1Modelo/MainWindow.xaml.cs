@@ -28,6 +28,9 @@ namespace Problema3Ev1P1Modelo
         public void crearRectangulo(Color c) {
             Rectangle r = new Rectangle();
             r.Fill = new SolidColorBrush(c);
+            r.Height = 50;
+            r.Width = 50;
+            r.Margin = new Thickness(5) ;
 
             wp.Children.Add(r);
 

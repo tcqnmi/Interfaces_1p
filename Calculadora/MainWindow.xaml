@@ -1,0 +1,191 @@
+﻿<Window x:Class="Calculadora.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculadora"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="540" Width="335" 
+        ResizeMode="CanMinimize"
+        Background="DarkSeaGreen">
+    <Window.Resources>
+        <SolidColorBrush x:Key="FondoBotonNum" Color="#FF66A680"/>
+        <SolidColorBrush x:Key="TextoBoton" Color="Snow"/>
+
+        <Thickness x:Key="margenComun"
+                   Left="3"
+                   Top="3"
+                   Right="3"
+                   Bottom="3"/>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource FondoBotonNum}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextoBoton}"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="26"/>
+            <Setter Property="Margin" Value="{StaticResource margenComun}"/>
+        </Style>
+
+        <Style x:Key="styOpArit" TargetType="Button"
+               BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Background" Value="AliceBlue">
+            </Setter>
+        </Style>
+
+        <Style x:Key="del_AC" TargetType="Button"
+               BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Background" Value="DarkRed">
+            </Setter>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style x:Key="styIgual" TargetType="Button"
+               BasedOn="{StaticResource styOpArit}">
+            <Setter Property="Background" Value="Aquamarine"/>
+
+        </Style>
+
+        <Style x:Key="logo" TargetType="Image">
+            <Setter Property="Width" Value="90"/>
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="TextAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="6,3"/>
+            <Setter Property="FontSize" Value="28"/>
+
+        </Style>
+
+    </Window.Resources>
+    <!-- Grid principal de zonas-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- Logo -->
+            <RowDefinition Height="Auto"/>
+            <!-- Display-->
+            <RowDefinition Height="2*"/>
+            <!-- Funciones-->
+            <RowDefinition />
+            <!--Funciones de memoria-->
+            <RowDefinition/>
+            <!-- Teclado númerico y aritméticas básicias-->
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <Image Style="{StaticResource logo}" Source="/imgs/casio-logo.png" HorizontalAlignment="Right"/>
+        <Border Grid.Row="1" 
+                Margin="{DynamicResource margenComun}" 
+                CornerRadius="6" BorderThickness="2" BorderBrush="Black">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE5F7F7" Offset="0.344"/>
+                    <GradientStop Color="#FFC2F7F7" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="1" Grid.ColumnSpan="2">1+8*2019</TextBlock>
+                <TextBlock Grid.Column="1">M</TextBlock>
+            </Grid>
+                
+        </Border>
+        <!-- Botones funciones  -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0">F1</Button>
+            <Button Grid.Column="1">F2</Button>
+            <Button Grid.Column="2">F3</Button>
+            <Button Grid.Column="3">F4</Button>
+            <Button Grid.Column="4">F5</Button>
+            <Button Grid.Column="5">F6</Button>
+            <Button Grid.Column="6">F7</Button>
+        </Grid>
+        <!-- Botones memoria  -->
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button>M+</Button>
+            <Button Grid.Column="1">M-</Button>
+            <Button Grid.Column="2">MC</Button>
+            <Button Grid.Column="3">M=</Button>
+        </Grid>
+        <!-- Teclado numérico y funciones aritméticas básicas  -->
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="54.4"/>
+                <ColumnDefinition Width="54*"/>
+                <ColumnDefinition Width="55*"/>
+                <ColumnDefinition Width="55*"/>
+                <ColumnDefinition Width="54*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!-- Fila 1-->
+            <Button Grid.Row="0" Grid.Column="0">7</Button>
+            <Button Grid.Row="0" Grid.Column="1">8</Button>
+            <Button Grid.Row="0" Grid.Column="2">9</Button>
+            <Button Grid.Row="0" Grid.Column="3">DEL</Button>
+            <Button Grid.Row="0" Grid.Column="4">AC</Button>
+
+            <!-- Fila 2-->
+            <Button Grid.Row="1" Grid.Column="0">4</Button>
+            <Button Grid.Row="1" Grid.Column="1">5</Button>
+            <Button Grid.Row="1" Grid.Column="2">6</Button>
+            <Button Grid.Row="1" Grid.Column="3" Style="{DynamicResource styOpArit}">
+                <Image Source="/imgs/multiplication-128.png" />
+            </Button>
+            <Button Grid.Row="1" Grid.Column="4" Style="{DynamicResource styOpArit}">
+                <Image Source="/imgs/division2-128.png" />
+            </Button>
+
+            <!-- Fila 3-->
+            <Button Grid.Row="0" Grid.Column="0">7</Button>
+            <Button Grid.Row="0" Grid.Column="1">8</Button>
+            <Button x:Name="sol" Grid.Row="0" Grid.Column="2">9</Button>
+            <Button Grid.Row="0" Grid.Column="3" Style="{DynamicResource del_AC}">DEL</Button>
+            <Button Grid.Row="0" Grid.Column="4" Style="{DynamicResource del_AC}">AC</Button>
+
+            <!-- Fila 2-->
+            <Button Grid.Row="2" Grid.Column="0">1</Button>
+            <Button Grid.Row="2" Grid.Column="1">2</Button>
+            <Button Grid.Row="2" Grid.Column="2">3</Button>
+            <Button Grid.Row="2" Grid.Column="3" Style="{DynamicResource styOpArit}">
+                <Image Source="/imgs/plus-128.png" />
+            </Button>
+            <Button Grid.Row="2" Grid.Column="4" Style="{DynamicResource styOpArit}">
+                <Image Source="/imgs/minus-128.png" />
+            </Button>
+
+            <!--Fila 3-->
+            <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">0</Button>
+            <Button Grid.Row="3" Grid.Column="2">.</Button>
+            <Button Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" Style="{DynamicResource styIgual}">
+                <Image Source="/imgs/equal.png" />
+            </Button>
+
+
+        </Grid>
+    </Grid>
+</Window>
